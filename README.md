@@ -15,3 +15,13 @@
 - Describing the UI
   - Your First Component
   - Importing and Exporting Components
+  - Writing Markup with JSX
+  - JavaScript in JSX with Curly Braces
+  - Passing Props to a Component
+  - Conditional Rendering
+  - Rendering Lists
+  - Keeping Components Pure
+- Adding Interactivity
+  - [Responding to Events](https://github.com/Jungle-JavaScript-Study/react-docs-study/blob/main/Adding%20Interactivity/Responding%20to%20Events.md)
+  - [State: A Component's Memory](https://github.com/Jungle-JavaScript-Study/react-docs-study/blob/main/Adding%20Interactivity/State%3A%20A%20Component's%20Memory.md)
+ 
