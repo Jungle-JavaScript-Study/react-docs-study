@@ -123,7 +123,19 @@ useEffect(() => {
 - Effect 대신 루트 변경 이벤트 핸들러에서 로그 전송하는 것도 방법
 - 정확하게 하려면 intersection observer 사용해서 뷰포트에 어떤 컴포넌트가 표시되는지를 추적
 
-#### 제품 구매는 Effect가 아니야!
+### 어플리케이션 초기화는 Effect가 아니야!
+애플리케이션이 시작될 때 한번만 실행되어야 하는 로직은 Effect가 아니라 컴포넌트 외부에 넣으면 됨(Effect는 최소한으로 사용하기)<br>
+ex.)
+```javascript
+if (typeof window !== 'undefined') { // 실행 환경이 브라우저인지 확인
+  checkAuthToken();
+  loadDataFromLocalStorage();
+}
+
+function App() {...}
+```
+
+### 제품 구매도 Effect가 아니야!
 - Effect에서 제품 구매 POST 요청을 보내면 클린업 함수로도 두번 실행되는걸 막을 수 없음.
 - 사용자가 다른 페이지로 갔다가 뒤로가기 버튼을 누르면 Effect가 다시 실행되면서 구매가 진행되는 문제 발생
 - 구매는 렌더링으로 발생하는 사이드 이펙트가 아니기때문에 로직을 구매 버튼의 이벤트핸들러로 옮겨야 함.
