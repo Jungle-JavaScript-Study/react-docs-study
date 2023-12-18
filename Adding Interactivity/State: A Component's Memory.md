@@ -1,4 +1,4 @@
-## **State: A Component's Memory**
+## **State - A Component's Memory**
 
 - `state`는 **컴포넌트별** 메모리
 - 컴포넌트 내에서 사용하는 지역 변수는 렌더링 간에 유지되지 않고, 변경해도 렌더링을 발동시키지 않음<br>
