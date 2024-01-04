@@ -37,7 +37,7 @@
 - Escape Hatches
   - [Referencing Values with Refs](https://github.com/Jungle-JavaScript-Study/react-docs-study/blob/main/LEARN%20REACT/Escape%20Hatches/Referencing%20Values%20with%20Refs%20-%20juhee.md)
   - [Manipulating the DOM with Refs](https://github.com/Jungle-JavaScript-Study/react-docs-study/blob/main/LEARN%20REACT/Escape%20Hatches/Manipulating%20the%20DOM%20with%20Refs%20-juhee.md)
-  - Synchronizing with Effects - [KoziKim](https://github.com/Jungle-JavaScript-Study/react-docs-study/blob/main/LEARN%20REACT/Escape%20Hatches/Synchronizing%20with%20Effects.md) [juhee](https://github.com/Jungle-JavaScript-Study/react-docs-study/blob/main/LEARN%20REACT/Escape%20Hatches/Synchronizing%20with%20Effects%20-juhee.md)
+  - Synchronizing with Effects - [cofla](https://github.com/Jungle-JavaScript-Study/react-docs-study/blob/main/LEARN%20REACT/Escape%20Hatches/Synchronizing%20with%20Effects.md) [juhee](https://github.com/Jungle-JavaScript-Study/react-docs-study/blob/main/LEARN%20REACT/Escape%20Hatches/Synchronizing%20with%20Effects%20-juhee.md)
   - You Might Not Need an Effects - [KoziKim](https://github.com/Jungle-JavaScript-Study/react-docs-study/blob/main/LEARN%20REACT/Escape%20Hatches/231113%20You%20Might%20Not%20Need%20an%20Effect%20-%20KoziKim.md) [juhee](https://github.com/Jungle-JavaScript-Study/react-docs-study/blob/main/LEARN%20REACT/Escape%20Hatches/You%20Might%20Not%20Need%20an%20Effect%20-juhee.md)
   - [Lifecycle of Reactive Effects](https://github.com/Jungle-JavaScript-Study/react-docs-study/blob/main/LEARN%20REACT/Escape%20Hatches/231116%20Lifecyle%20of%20Reactive%20Effects%20-%20KoziKim.md)
   - [Separating Events from Effects](https://github.com/Jungle-JavaScript-Study/react-docs-study/blob/main/LEARN%20REACT/Escape%20Hatches/Separating%20Events%20from%20Effects-juhee.md)
@@ -58,9 +58,9 @@
     - [useRef](https://github.com/Jungle-JavaScript-Study/react-docs-study/blob/main/API%20REFERENCE/Hooks/Ref%20Hooks/useRef-juhee.md)
     - [useImperativeHandle](https://github.com/Jungle-JavaScript-Study/react-docs-study/blob/main/API%20REFERENCE/Hooks/Ref%20Hooks/useImperativeHandle-juhee.md)
   - Effect Hooks
-    - useEffect
-    - useLayoutEffect
-    - useInsertionEffect
+    - [useEffect](https://github.com/Jungle-JavaScript-Study/react-docs-study/blob/main/API%20REFERENCE/Hooks/Effect%20Hooks/useEffect.md)
+    - [useLayoutEffect](https://github.com/Jungle-JavaScript-Study/react-docs-study/blob/main/API%20REFERENCE/Hooks/Effect%20Hooks/useLayoutEffect.md)
+    - [useInsertionEffect](https://github.com/Jungle-JavaScript-Study/react-docs-study/blob/main/API%20REFERENCE/Hooks/Effect%20Hooks/useInsertionEffect.md)
   - Performance Hooks
     - useMemo
     - useCallback - [cofla](https://github.com/Jungle-JavaScript-Study/react-docs-study/blob/main/API%20REFERENCE/Hooks/useCallback.md) [juhee](https://github.com/Jungle-JavaScript-Study/react-docs-study/blob/main/API%20REFERENCE/Hooks/Performance%20Hooks/useCallback-juhee.md)
