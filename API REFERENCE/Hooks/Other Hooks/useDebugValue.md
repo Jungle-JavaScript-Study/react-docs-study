@@ -32,14 +32,13 @@
           // ...
         }
         ```
-        
-        ![`useDebugValue` 호출이 없으면 기본 데이터(예시에서는 `true`)만 표시됩니다.](https://prod-files-secure.s3.us-west-2.amazonaws.com/20991e95-6e3a-45e4-bccc-2672d974adb9/53b01695-ca2d-48f0-93e1-27039da48673/Untitled.png)
-        
+        ![Untitled (1)](https://github.com/Jungle-JavaScript-Study/deep-dive/assets/126440955/cd5d7c26-25d3-4734-b44a-d8046d052dfa)
+
         `useDebugValue` 호출이 없으면 기본 데이터(예시에서는 `true`)만 표시됩니다.
         
         <aside>
         💡 모든 커스텀훅에 디버그 값을 추가하지 마시오 !
-        공유 라이브러리에서 **검사하기 어려운 복잡한 내부 데이터를 가진 커스텀 훅**에 가장 **유용**합니다.
+        공유 라이브러리에서 <strong>검사하기 어려운 복잡한 내부 데이터를 가진 커스텀 훅</strong>에 가장 <strong>유용</strong>합니다.
         
         </aside>
         
@@ -50,4 +49,4 @@
         ```
         
         - 이렇게하면 컴포넌트를 실제로 조사하지 않는 한 비용이 많이 들 수 있는 포매팅 로직을 실행하지 않아도 됩니다.
-        ex> `date` 가 날짜 값인 경우, 컴포넌트를 렌더링 할 때마다 toDateString() 을 호출하지 않습니다.
+        ex> `date` 가 날짜 값인 경우, 컴포넌트를 렌더링 할 때마다 `toDateString()` 을 호출하지 않습니다.
