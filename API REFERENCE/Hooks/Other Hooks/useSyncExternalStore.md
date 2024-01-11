@@ -1,4 +1,4 @@
-- `**useSyncExternalStore`** 는 외부 스토어를 구독할 수 있는 React Hook
+- `useSyncExternalStore` 는 외부 스토어를 구독할 수 있는 React Hook
 - Reference
     
     ```jsx
