@@ -53,7 +53,7 @@
     - useState - [juhee](https://github.com/Jungle-JavaScript-Study/react-docs-study/blob/main/API%20REFERENCE/Hooks/State%20Hooks/useState-juhee.md) [SungBeum](https://github.com/Jungle-JavaScript-Study/react-docs-study/blob/main/API%20REFERENCE/Hooks/State%20Hooks/useState-sungbeum.md)
     - useReducer - [juhee](https://github.com/Jungle-JavaScript-Study/react-docs-study/blob/main/API%20REFERENCE/Hooks/State%20Hooks/useReducer-juhee.md) [SungBeum](https://github.com/Jungle-JavaScript-Study/react-docs-study/blob/main/API%20REFERENCE/Hooks/State%20Hooks/useReducer-sungbeum.md)
   - Context Hooks
-    - useContext
+    - [useContext](https://github.com/Jungle-JavaScript-Study/react-docs-study/blob/main/API%20REFERENCE/Hooks/Context%20Hooks/useContext%20-%20juhee.md)
   - Ref Hooks
     - [useRef](https://github.com/Jungle-JavaScript-Study/react-docs-study/blob/main/API%20REFERENCE/Hooks/Ref%20Hooks/useRef-juhee.md)
     - [useImperativeHandle](https://github.com/Jungle-JavaScript-Study/react-docs-study/blob/main/API%20REFERENCE/Hooks/Ref%20Hooks/useImperativeHandle-juhee.md)
@@ -63,11 +63,11 @@
     - [useInsertionEffect](https://github.com/Jungle-JavaScript-Study/react-docs-study/blob/main/API%20REFERENCE/Hooks/Effect%20Hooks/useInsertionEffect.md)
   - Performance Hooks
     - useMemo
-    - useCallback - [cofla](https://github.com/Jungle-JavaScript-Study/react-docs-study/blob/main/API%20REFERENCE/Hooks/useCallback.md) [juhee](https://github.com/Jungle-JavaScript-Study/react-docs-study/blob/main/API%20REFERENCE/Hooks/Performance%20Hooks/useCallback-juhee.md)
-    - useTransition
+    - useCallback - [cofla](https://github.com/Jungle-JavaScript-Study/react-docs-study/blob/main/API%20REFERENCE/Hooks/Performance%20Hooks/useCallback-cofla.md) [juhee](https://github.com/Jungle-JavaScript-Study/react-docs-study/blob/main/API%20REFERENCE/Hooks/Performance%20Hooks/useCallback-juhee.md)
+    - [useTransition](https://github.com/Jungle-JavaScript-Study/react-docs-study/blob/main/API%20REFERENCE/Hooks/Performance%20Hooks/useTransition%20-%20juhee.md)
     - useDeferredValue
   - Other Hooks
-    - useDebugValue
-    - useId
-    - useSyncExternalStore
+    - [useDebugValue](https://github.com/Jungle-JavaScript-Study/react-docs-study/blob/main/API%20REFERENCE/Hooks/Other%20Hooks/useDebugValue.md)
+    - [useId](https://github.com/Jungle-JavaScript-Study/react-docs-study/blob/main/API%20REFERENCE/Hooks/Other%20Hooks/useId.md)
+    - [useSyncExternalStore](https://github.com/Jungle-JavaScript-Study/react-docs-study/blob/main/API%20REFERENCE/Hooks/Other%20Hooks/useSyncExternalStore.md)
 
