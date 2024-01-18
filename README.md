@@ -71,3 +71,8 @@
     - [useId](https://github.com/Jungle-JavaScript-Study/react-docs-study/blob/main/API%20REFERENCE/Hooks/Other%20Hooks/useId.md)
     - [useSyncExternalStore](https://github.com/Jungle-JavaScript-Study/react-docs-study/blob/main/API%20REFERENCE/Hooks/Other%20Hooks/useSyncExternalStore.md)
 
+- Components
+  - [`<Fragment>` (<>)](https://github.com/Jungle-JavaScript-Study/react-docs-study/blob/main/API%20REFERENCE/Components/%3CFragment%3E.md)
+  - [`<Profiler>`](https://github.com/Jungle-JavaScript-Study/react-docs-study/blob/main/API%20REFERENCE/Components/%3CProfiler%3E.md)
+  - [`<StrictMode>`](https://github.com/Jungle-JavaScript-Study/react-docs-study/blob/main/API%20REFERENCE/Components/%3CStrictMode%3E.md)
+  - `<Suspense>`
