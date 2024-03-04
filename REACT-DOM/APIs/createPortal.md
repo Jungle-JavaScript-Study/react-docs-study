@@ -1,6 +1,7 @@
 # createPortal
 
-- cratePortal을 사용하면 일부 자식을 DOM의 다른 부분으로 렌더링할 수 있다.
+- cratePortal을 사용하면 컴포넌트의 일부를 DOM의 다른 부분에 렌더링할 수 있다.
+- 포털을 생성하려면 createPortal을 호출하고 JSX와 렌더링할 DOM 노드를 전달한다.
 
 ```jsx
 <div>
@@ -9,31 +10,9 @@
 </div>
 ```
 
-# Reference
-
-```js
-createPortal(children, domNode, key?)
-```
-
-- 포털을 생성하려면 createPortal을 호출하고 몇 가지 JSX와 렌더링할 DOM 노드를 전달한다.
-
-```jsx
-import { createPortal } from "react-dom";
-
-// ...
-
-<div>
-  <p>This child is placed in the parent div.</p>
-  {createPortal(
-    <p>This child is placed in the document body.</p>,
-    document.body
-  )}
-</div>;
-```
-
 - 포털은 DOM 노드의 **물리적 배치**만 변경한다.
-- 다른 모든 방식에서 포털에 렌더링하는 JSX는 이를 렌더링하는 React 컴포넌트의 자식 노드 역할을 한다.
-- 예를 들어, 자식은 부모 트리에서 제공하는 컨텍스트에 접근할 수 있고, 이벤트는 React 트리에 따라 자식에서 부모로 버블링된다.
+- 포털에 렌더링하는 JSX도 이를 렌더링하는 React 컴포넌트의 자식 노드 역할을 한다.
+  - 예를 들어, 자식은 부모 트리에서 제공하는 컨텍스트에 접근할 수 있고, 이벤트는 React 트리에 따라 자식에서 부모로 버블링된다.
 
 ## Parameters
 
@@ -44,7 +23,7 @@ import { createPortal } from "react-dom";
 ### domNode
 
 - `document.getElementById()`가 반환하는 것과 같은 일부 DOM 노드
-- 노드는 이미 존재하는 것이어야 한다.
+- 노드는 이미 존재하는 것이어야 한다. (null이면 안됨)
 - 업데이트 중에 다른 DOM 노드를 전달하면 포털 콘텐츠가 다시 생성된다.
 
 ### key (optional)
@@ -53,16 +32,16 @@ import { createPortal } from "react-dom";
 
 ## Returns
 
-- JSX에 포함되거나 React 컴포넌트에서 반환될 수 있는 React 노드
-- React가 렌더링 출력물에서 이를 발견하면, 제공된 children을 제공된 domNode 안에 배치한다.
+- JSX에 포함시키거나 React 컴포넌트에서 반환할 수 있는 React 노드를 반환한다.
+- React가 렌더링 출력에서 이것을 만나면, 제공된 children을 제공된 domNode 안에 배치한다.
 
 <br/>
 
 # 주의사항
 
 - 포털의 이벤트는 DOM 트리가 아닌 React 트리에 따라 전파된다.
-- 예를 들어, 포털 내부를 클릭했을 때 포털이 `<div onClick>`으로 감싸져 있으면 해당 `onClick` 핸들러 이벤트가 실행된다.
-- 이로 인해 문제가 발생한다면, 포털 내부에서 이벤트 전파를 중지하거나 포털 자체를 React 트리에서 위로 옮겨야 한다.
+  - 예를 들어, 포털 내부를 클릭했을 때 포털이 `<div onClick>`으로 감싸져 있으면 해당 `onClick` 핸들러 이벤트가 실행된다.
+  - 이로 인해 문제가 발생한다면, 포털 내부에서 이벤트 전파를 중지하거나 포털 자체를 React 트리에서 위로 옮겨야 한다.
 
 <br/>
 
@@ -70,8 +49,8 @@ import { createPortal } from "react-dom";
 
 ## 1) DOM의 다른 부분으로 렌더링하기
 
-- 포털을 사용하면 컴포넌트가 자식 중 일부를 DOM의 다른 위치에 렌더링할 수 있다.
-- 이를 통해 컴포넌트의 일부가 어떤 컨테이너에 있든 그 컨테이너에서 escape(탈출)할 수 있다.
+- 포털을 사용하면 컴포넌트 자식 중 일부를 DOM의 다른 위치에 렌더링할 수 있다.
+- 이를 통해 컴포넌트의 일부가 그 컨테이너에서 escape(탈출)할 수 있다.
 - 예를 들어, 모달이나 툴팁을 페이지의 나머지 부분 위에 or 외부에 표시할 수 있다.
 - 포털을 생성하려면 createPortal의 결과를 일부 JSX와 함께 렌더링하고 포털이 있어야 할 DOM 노드를 지정한다.
 - React는 사용자가 전달한 JSX에 대한 DOM 노드를 사용자가 제공한 DOM 노드 안에 배치한다.
@@ -93,19 +72,13 @@ export default function MyComponent() {
 
 ![portal](image.png)
 
-### 포털은 DOM 노드의 물리적 배치만 변경한다.
-
-- 다른 모든 면에서 포털에 렌더링하는 React 컴포넌트의 자식 노드 역할을 한다.
-  - 부모 트리가 제공하는 컨텍스트에 접근 가능
-  - 이벤트도 여전히 React 트리에 따라 자식에서 부모로 버블링 됨
-
 <br/>
 
 ## 2) 모달 렌더링하기
 
 - 모달을 불러오는 컴포넌트가 `overflow: hidden` 또는 이를 숨기는 어떤 다른 스타일이 지정되어 있더라도, 포털을 사용해서 나머지 페이지 위에 띄울 수 있다.
 
-아래 예시에서는 모달을 방해하는 스타일이 있지만, 포털에 렌더링된 모달은 DOM에서 부모 JSX 요소에 포함되지 않기 때문에 영향을 받지 않고 잘 표시된다.
+아래 예시에서 포털에 렌더링된 모달은 DOM에서 부모 JSX 요소에 포함되지 않기 때문에, 부모 스타일의 영향을 받지 않고 잘 표시된다.
 
 ```jsx
 // App
@@ -150,7 +123,7 @@ export default function PortalExample() {
 - 모달을 만들 때는 [WAI-ARIA 모달 제작 사례](https://www.w3.org/WAI/ARIA/apg/#dialog_modal)를 따라야 한다.
   - WAI-ARIA(Web Accessibility Initiative - Accessible Rich Internet Applications) : 장애가 있는 사용자도 더 쉽게 이해하고 사용할 수 있도록 설계된 기술 표준
 
-## React 컴포넌트를 non-React 서버 마크업으로 렌더링하기
+## 3) React 컴포넌트를 non-React 서버 마크업으로 렌더링하기
 
 - 포털은 React 루트가 React로 빌드되지 않은 'static 페이지' 또는 'server-rendered 페이지'의 일부일 때 유용할 수 있다.
 - 예를 들어, 페이지가 Rails와 같은 서버 프레임워크로 빌드된 경우, 사이드바와 같은 정적 영역 내에 상호작용 가능한 영역을 만들 수 있다.
@@ -218,7 +191,7 @@ function SidebarContent() {
 
 <br/>
 
-## React 컴포넌트를 non-React DOM 노드로 렌더링하기
+## 4) React 컴포넌트를 non-React DOM 노드로 렌더링하기
 
 - React가 아닌 DOM 요소에 React 콘텐츠를 삽입할 수 있다.
 
