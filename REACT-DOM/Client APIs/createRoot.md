@@ -101,7 +101,7 @@ root.render(<App />);
 - HTML이 비어있으면 앱의 JS 코드가 로드되고 실행될 때까지 사용자에게 빈 페이지가 표시되어서 느리게 느껴질 수 있다.
     - 이 문제를 해결하기 위해 서버에서 or 빌드 중에 컴포넌트로부터 초기 HTML을 생성할 수 있다.
     - 이런 최적화를 기본적으로 수행하는 프레임워크를 사용하는 것을 추천한다.
-    - 실행 시점에 따라 이를 SSR(서server-side rendering) 또는 SSG(static site generation)라고 한다.
+    - 실행 시점에 따라 이를 SSR(server-side rendering) 또는 SSG(static site generation)라고 한다.
     - SSR이나 SSG를 사용하는 앱은 createRoot 대신 hydrateRoot를 호출해야 한다.
         - 그러면 React는 DOM 노드를 파괴하고 재생성하는 대신 재사용(hydrate)한다.
 
