@@ -16,7 +16,7 @@ const root = hydrateRoot(domNode, reactNode);
 - 전부 React로 구성된 앱은 일반적으로 루트 컴포넌트와 함께 hydrateRoot를 한 번만 호출한다.
 
 ## 1) Parameters
-### domMode
+### domNode
 - 서버에서 루트 요소로서 렌더링된 DOM 요소
 
 ### reactNode
