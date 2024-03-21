@@ -16,7 +16,7 @@ const root = createRoot(domNode);
 - 페이지의 일부에만 React를 사용하는 경우 필요한 만큼 여러 개의 독립적인 루트를 가질 수 있다.
 
 ## 1) Parameters
-### domMode
+### domNode
 - 루트를 생성할 DOM 엘리먼트
 
 ### options (optional)
